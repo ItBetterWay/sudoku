@@ -15,8 +15,13 @@ const getRow = (array, idx) =>{
     return array[idx];
 }
 
-const getColumn = () =>{
-
+const getColumn = (array, idx) =>{
+    let column = [];
+    for (let i = 0; i < array.length; i++){
+        let currentArray = array[i];
+        column.push(currentArray[idx]);
+    }
+    return column;
 }
 
 const getSection = () =>{
