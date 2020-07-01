@@ -11,8 +11,8 @@ let puzzle = [[ 8,9,5,   7,4,2,   1,3,6 ],
               [ 7,4,6,   3,2,5,   8,1,9 ],
               [ 3,2,8,   1,9,6,   5,4,7 ]];
 
-const getRow = () =>{
-
+const getRow = (array, idx) =>{
+    return array[idx];
 }
 
 const getColumn = () =>{
