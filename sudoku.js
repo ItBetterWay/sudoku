@@ -43,7 +43,6 @@ const getSection = (array, idxX, idxY) =>{
                 }
             }
         }
-
     } else if (idxY === 1){
         for (let i = 3; i < 6; i++){
             let currentRow = array[i];
