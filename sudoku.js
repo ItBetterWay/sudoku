@@ -24,6 +24,60 @@ const getColumn = (array, idx) =>{
     return column;
 }
 
-const getSection = () =>{
+const getSection = (array, idxX, idxY) =>{
+    let result = [];
+    if (idxY === 0){
+        for (let i = 0; i < 3; i++){
+            let currentRow = array[i];
+            if (idxX === 0){
+                for (let j = 0; j < 3; j++){
+                    result.push(currentRow[j]);
+                }
+            } else if (idxX === 1){
+                for (let j = 3; j < 6; j++){
+                    result.push(currentRow[j]);
+                }
+            } else {
+                for (let j = 6; j < 9; j++){
+                    result.push(currentRow[j]);
+                }
+            }
+        }
 
+    } else if (idxY === 1){
+        for (let i = 3; i < 6; i++){
+            let currentRow = array[i];
+            if (idxX === 0){
+                for (let j = 0; j < 3; j++){
+                    result.push(currentRow[j]);
+                }
+            } else if (idxX === 1){
+                for (let j = 3; j < 6; j++){
+                    result.push(currentRow[j]);
+                }
+            } else {
+                for (let j = 6; j < 9; j++){
+                    result.push(currentRow[j]);
+                }
+            }
+        }
+    } else {
+        for (let i = 6; i < 9; i++){
+            let currentRow = array[i];
+            if (idxX === 0){
+                for (let j = 0; j < 3; j++){
+                    result.push(currentRow[j]);
+                }
+            } else if (idxX === 1){
+                for (let j = 3; j < 6; j++){
+                    result.push(currentRow[j]);
+                }
+            } else {
+                for (let j = 6; j < 9; j++){
+                    result.push(currentRow[j]);
+                }
+            }
+        }
+    }
+    return result;
 }
