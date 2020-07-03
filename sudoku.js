@@ -80,3 +80,22 @@ const getSection = (array, idxX, idxY) =>{
     }
     return result;
 }
+
+const isValid = (array) =>{
+    let valid = true;
+    for (let i = 0; i < array.length; i++){
+        for (let j = i; j < array.length; j++){
+            if(array[i] > array[j]){
+                let tempElem = array[i];
+                array[i] = array[j];
+                array[j] = tempElem;
+            }
+        }
+    }
+    for (let i = 1; i <= 9; i++){
+        if(i !== array[i - 1]){
+            valid = false;
+        }
+    }
+    return valid;
+}
